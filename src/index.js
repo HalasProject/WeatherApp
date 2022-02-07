@@ -11,7 +11,7 @@ ReactDOM.render(
   <HelmetProvider>
     <BrowserRouter>
       <WeatherDataContextProvider>
-        <Router />
+          <Router />
       </WeatherDataContextProvider>
     </BrowserRouter>
   </HelmetProvider>,
