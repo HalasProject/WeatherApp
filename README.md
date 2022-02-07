@@ -1,6 +1,14 @@
-# Getting Started with Create React App
-
+# Weather App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Screens
+
+<div>
+<a href="https://ibb.co/fYGyDGz"><img src="https://i.ibb.co/jvZQJZP/search.png" alt="search"></a>
+<a href="https://ibb.co/b2S6TSL"><img src="https://i.ibb.co/hZPgbPH/home.png" alt="home"></a>
+<a href="https://ibb.co/n1SPmZp"><img src="https://i.ibb.co/Wz1V5qC/home-mobile.png" alt="home-mobile"></a>
+<a href="https://ibb.co/B2sJT8S"><img src="https://i.ibb.co/yFsCgLb/search-mobile.png" alt="search-mobile" ></a>
+</div>
 
 ## Available Scripts
 
@@ -39,27 +47,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
