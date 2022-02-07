@@ -16,7 +16,7 @@ export default function Searchbar() {
         let WI = new WeatherInstance(lat,lng)
         WI.getDailyWeather().then(data => {
             setWeatherData({...data,name})
-            if (location.pathname == '/') {
+            if (location.pathname === '/') {
                 navigate("/search");
             }
         })
@@ -54,10 +54,10 @@ export default function Searchbar() {
     },[algolia])
 
     return (
-        <div className="w-full lg:w-6/12 flex">
+        <div className="w-full flex-col lg:w-6/12 lg:flex lg:flex-row">
             <input id="search-algolia" type="text" placeholder="Rechercher une ville, une station, un pays, ..." 
             className="drop-shadow-md form-input px-4 py-3  block bg-gray-100 w-full border-transparent rounded-md focus:bg-white focus:outline-0 focus:ring-0 focus:drop-shadow-lg" />
-            <button onClick={() => currentPosition()} className="ml-6 whitespace-nowrap drop-shadow-md bg-violet-600 hover:bg-violet-500 text-white font-bold py-2 px-4 border-transparent rounded-md focus:outline-0 focus:ring-0 focus:drop-shadow-lg" type="button">Position Actuelle</button>
+            <button onClick={() => currentPosition()} className="my-4 lg:my-0 lg:ml-6 whitespace-nowrap drop-shadow-md bg-violet-600 hover:bg-violet-500 text-white font-bold py-2 px-4 border-transparent rounded-md focus:outline-0 focus:ring-0 focus:drop-shadow-lg" type="button">Position Actuelle</button>
         </div>
        
     )
