@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { HelmetProvider } from 'react-helmet-async'
 import reportWebVitals from './reportWebVitals';
+import "./index.scss";
+import Router from './routes';
+import { BrowserRouter } from 'react-router-dom';
+import { WeatherDataContextProvider } from './WeatherDataContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HelmetProvider>
+    <BrowserRouter>
+      <WeatherDataContextProvider>
+        <Router />
+      </WeatherDataContextProvider>
+    </BrowserRouter>
+  </HelmetProvider>,
   document.getElementById('root')
 );
 
