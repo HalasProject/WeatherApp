@@ -1,12 +1,13 @@
 import './WeatherCard.scss';
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale';
+import { OPEN_WEATHER_ICON_URL } from '../../environment';
 export default function Weather({data}) {
 
     return (<>
         <div className="w-full bg-gray-500 border-2 border-gray-300 shadow-lg h-full rounded-lg flex-col lg:flex lg:flex-row items-center justify-between p-4 md:p-16 px-24">
             <div className="text-gray-100 text-md lg:text-4xl flex-col lg:flex lg:flex-row just text-center lg:text-left justify-start whitespace-nowrap mr-12 w-full lg:w-1/2 ">
-                <img className="self-center hidden lg:block w-32 mr-4" alt="weather icon" src={'http://openweathermap.org/img/wn/' + data?.current.weather[0].icon + '@2x.png'}/>
+                <img className="self-center hidden lg:block w-32 mr-4" alt="weather icon" src={OPEN_WEATHER_ICON_URL.replace('ICON_HERE',data?.current.weather[0].icon)}/>
                 <div className="flex flex-col flex-nowrap">
                     <p className="text-6xl mb-3">{Math.floor(data?.current.temp ?? 0 ) }°C </p>
                     <p className="mb-2">Humidity: {data?.current.humidity ?? 'N/C'}%</p>
