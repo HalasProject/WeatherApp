@@ -1,5 +1,6 @@
 import './WeatherCard.scss';
 import { format } from 'date-fns'
+import { fr } from 'date-fns/locale';
 export default function Weather({data}) {
 
     return (<>
@@ -14,7 +15,7 @@ export default function Weather({data}) {
             </div>
             <div className="text-gray-100 text-md lg:text-4xl flex flex-col flex-nowrap justify-end white w-full lg:w-1/2 text-center lg:text-left">
                 <p className="text-md lg:text-6xl mb-3">{data?.name ?? 'N/C'}</p>
-                <p className="mb-2">{data?.current.dt ? format(data.current.dt * 1000,'MM/dd/yyyy p') : 'N/C'}</p>
+                <p className="mb-2 capitalize">{data?.current.dt ? format(data.current.dt * 1000,'EEEE p a',{locale:fr}) : 'N/C'}</p>
                 <p className="capitalize">{data?.current?.weather[0].description ?? 'N/C'}</p>
             </div>
         </div>

@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 import Map from "../../components/Map/Map";
 import SearchBar from '../../components/Searchbar/Searchbar';
 import WeatherCard from '../../components/WeatherCard/WeatherCard';
@@ -10,6 +11,12 @@ import './Weather.scss';
 export default function Weather() {
 
     const { weatherData } = useContext(WeatherDataContext);
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (weatherData == undefined) {
+            navigate("/");
+        }
+      }, []);
 
     return (<>
         <Helmet>
